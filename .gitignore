@@ -1,0 +1,28 @@
+# Build directories
+.zig-cache/
+zig-out/
+build/
+out/
+bin/
+
+# Asset cache
+assets/compiled/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs / Debug
+*.log
+logs/
+tracy_capture*
+*.tracy
+
+# Others
+tmp/
+temp/
+*.so.tmp
+*.dll.tmp
+*.dylib.tmp
+.DS_Store
+Thumbs.db
