@@ -1,6 +1,7 @@
 # Build directories
 .zig-cache/
 zig-out/
+zig-pkg/
 build/
 out/
 bin/
