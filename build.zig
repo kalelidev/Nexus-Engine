@@ -23,6 +23,12 @@ pub fn build(b: *std.Build) void {
     // y hereda información de link/include.
     sdl_module.linkLibrary(sdl_lib);
 
+    // Vulkan bindings
+    const registry = b.dependency("vulkan_headers", .{}).path("registry/vk.xml");
+    const vulkan_mod = b.dependency("vulkan", .{
+        .registry = registry,
+    }).module("vulkan-zig");
+    
     // Ejecutable principal
     const exe = b.addExecutable(.{
         .name = "nexus_engine",
@@ -35,6 +41,10 @@ pub fn build(b: *std.Build) void {
                     .name = "sdl",
                     .module = sdl_module,
                 },
+    .{
+        .name = "vulkan",
+        .module = vulkan_mod,
+    },
             },
         }),
     });

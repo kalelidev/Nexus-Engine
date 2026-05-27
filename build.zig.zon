@@ -36,6 +36,14 @@
             .url = "git+https://github.com/castholm/SDL.git?ref=v0.5.0%2B3.4.8#21c6b79840d123e94a9f183f4b0fa1731668f48d",
             .hash = "sdl-0.5.0+3.4.8-SDL--k4DpgH323IfF6cEaGzKUdtUQv1azbBmmcv0RMAu",
         },
+        .vulkan = .{
+            .url = "git+https://github.com/Snektron/vulkan-zig.git",
+            .hash = "vulkan-0.0.0-r7Ytx7N9AwD7IZt5_XNHtkJ4G9qY0pCH-cpcOsbL8wzD",
+        },
+.vulkan_headers = .{
+            .url = "git+https://github.com/KhronosGroup/Vulkan-Headers#015e25c3c91b70eb1a754d36fb14c4ba6ad9b0b9",
+            .hash = "N-V-__8AAK9XtgdbE-7U3nligMlYZfjYIvWD6lC9_zLHSNQn",
+        },
         // See `zig fetch --save <url>` for a command-line interface for adding dependencies.
         //.example = .{
         //    // When updating this field to a new URL, be sure to delete the corresponding
@@ -78,8 +86,6 @@
         "build.zig",
         "build.zig.zon",
         "src",
-        // For example...
         //"LICENSE",
-        //"README.md",
     },
 }
